@@ -1,0 +1,282 @@
+
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:root{
+    --ff-primary: 'Playfair Display', serif;
+    --ff-secundary:'Fira Sans', sans-serif;
+    
+    --fs-400:1rem;
+    --fs-500:1.125rem;
+    --fs-600:1.25rem;
+    --fs-700:1.5rem;
+    --fs-800:1.8rem;
+    --fs-900:5rem;
+  
+    --fw-500:500;
+    --fw-700:700;
+    --fw-800:800;
+}
+
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+/* MY CSS BEGINS HERE */
+
+
+body{
+  background-color: lightgray;
+   font-family: var(--ff-secundary);
+   font-size: var(--fs-500);
+   background: url("../images/cityneon.jpeg") no-repeat fixed top center /cover;
+}
+
+
+header{
+    text-align: center;
+    background-color: lightskyblue;
+    color: lavenderblush;
+    letter-spacing: .1rem;
+}
+.image-div{
+  border-radius: 20px;
+  overflow: hidden;
+  height: fit-content;
+  margin-top: 1.9rem;
+  box-shadow: 0 0 40px white;
+}
+
+
+.textPreview{
+  width: 15rem;
+  margin-top: 1rem;
+}
+.textPreview>h4{
+  font-size: .8rem;
+  font-family: var(--ff-primary);
+  color: darkcyan;
+  padding: .8rem;
+  background-color: white;
+  border: 1px solid darkcyan;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px black;
+}
+
+.page-title{
+  color: white;
+  padding-left: 10rem;
+}
+nav>h1,nav>p{
+font-family: var(--ff-primary);
+}
+
+nav{
+  display: grid;
+  grid-template-columns: 10% 90%;
+  min-width: 100%;
+  text-align: center;
+}
+.nav-text{
+  padding: 1rem 0;
+  max-width: 80%;
+  margin: 0 auto;
+  font-family: var(--ff-primary);
+}
+
+main{
+    padding: 2rem 5rem;
+}
+
+h2{
+  font-family: var(--ff-primary);
+}
+.new-post-btn{
+    background-color:lightgreen;
+    color: darkcyan;
+    padding: 1rem;
+    border: none;
+    border-radius: 100vw;
+    margin:1rem auto;
+    cursor: pointer;
+}
+.new-post-btn:hover{
+    background-color: skyblue;
+}
+
+.main-content{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.articles{
+    grid-column: 2;
+    margin-bottom: 2rem;
+    border-radius: 10px;
+}
+
+/* Card CSS */
+
+.card{
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.article-section{
+  border: 2px solid whitesmoke;
+  background-color: whitesmoke;
+  box-shadow: 1px 1px 20px white;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+  padding: 1rem;
+}
+
+.article-section>h2, .article-section>a{
+  color: darkcyan;
+  text-decoration: none;
+}
+.article-section>h2:hover, .article-section>a:hover{
+  color: lightblue;
+}
+
+.card p{
+   border: 2px black;
+    box-shadow: 2px 2px 6px  black;
+    border-radius: 10px;
+    padding: 10px;
+    font-size: .6rem;
+    max-width: 8rem;
+    font-family: sans-serif;
+    font-weight: 600;
+    color: darkcyan;
+    background-color: lightcyan;
+}
+
+/* Date string css */
+
+.card .date-string{
+    border: none;
+    font-size: 12px;
+    margin: 0 10px;
+}
+
+
+
+@media(max-width:50rem){
+
+.page-title{
+  padding: 0;
+}
+main{
+  padding: 5%;
+}
+
+.main-content{
+
+  display: block;
+  width: 100%;
+  text-align: center;
+  justify-content: center;
+}
+.image-div{
+  width: 100%;
+}
+.article-section{
+ display: grid;
+}
+.article-section>*{
+  margin:.5rem auto;
+}
+nav{
+  grid-template-columns: 25% 75%;
+}
+
+.logo{
+ height: 100%;
+}
+
+}
+
+
+
+
+
+

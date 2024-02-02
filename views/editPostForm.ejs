@@ -1,0 +1,29 @@
+<%-include("partials/header.ejs")%>
+<link rel="stylesheet" href="\styles\articleForm.css">
+
+
+
+<section>
+<div class="form-div">
+    <h1> New Post</h1>
+    <form action="/update-post/<%=postToEdit.id %>" method="post" class="form">
+        <div>
+            <label for="title"></label>
+            <input type="text" id="title" name="title" required value="<%= postToEdit.title %>" >
+            <label for="text">Text</label>
+            <textarea name="text" required id="text" cols="30" rows="10"><%= postToEdit.text %></textarea>
+        </div>
+        <div class="button-div">
+            <button  type="submit" class="post-button" value="Update">Update</button>           
+        
+    </form>
+    <form action="/delete-post/<%= postToEdit.id %>" method="post">
+        <button  class="delete-button">Delete</button>
+   </form>
+   </div>
+  
+</div>
+
+</section>
+
+ 

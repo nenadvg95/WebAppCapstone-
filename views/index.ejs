@@ -1,0 +1,37 @@
+<%-include("partials/header.ejs")%>
+
+<div class="main-content">
+    <div>
+        <a href="/newPost"><button class="new-post-btn">New Post</button></a>
+    </div>
+    <h2 class="page-title">Articles</h2>
+    <div class="image-div">
+        <a href="#"><img class="kdb" src="\images\kdb.jpg" alt=""></a>
+    </div>
+    <% if(posts.length===0){ %>
+        <% console.log("No posts found"); %>
+        <% }else{ %>
+    <div class="articles">
+        <div class="card">
+            <% posts.forEach((post) => {%>
+                <div class="article-section">
+                <a href="/edit-post/<%= post.id %>"><h2><%= post.title %></h2></a>
+                <p><%= post.createdAt %></p>
+                <div class="textPreview">
+                    <% const textPreview = String(post.text).slice(0,51)+"..."%>
+                        <h4><%= textPreview %></h4>
+                </div>
+            </div>  
+            <%}); %>
+            <% } %>
+        </div>
+</div>
+</div>
+
+
+
+
+</main>
+    
+</body>
+</html>

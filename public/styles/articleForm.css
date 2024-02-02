@@ -1,0 +1,112 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap');
+body{
+    height: 100vh;
+    overflow-x: hidden;
+    background: url("../images/eithad.jpg") no-repeat fixed top center / cover  ;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: 900;
+}
+.title{
+    padding-left: 5rem
+}
+
+section{
+    margin: 0 5rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+
+.form-div *{
+display: block;
+width: 600px;
+max-width: 600px;
+-webkit-text-stroke: .01px skyblue;
+}
+.form-div h1{
+    margin-bottom: 1rem;
+}
+.form{
+    display: grid;
+    grid-template-columns: 1fr 0.5fr;
+}
+.button-div{
+    padding-left: 4rem;
+}
+
+.post-button{
+    background-color:cornflowerblue;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 100vw;
+    margin-right: 2rem;
+    margin-bottom: 2rem;
+    cursor: pointer;
+    width: 6rem;
+}
+
+.delete-button{
+    background-color:lightcoral;
+    color: white;
+    padding: 1rem;
+    border: none;
+    border-radius: 100vw;
+    margin-right: 2rem;
+    cursor: pointer;
+    width: 6rem;
+}
+
+.post-button:hover{
+    background-color: darkslateblue;
+}
+
+.delete-button:hover{
+    background-color: darkred;
+}
+
+input{
+    font-size: 14px;
+    padding: 2px 10px;
+    border-radius: 10px;
+}
+textarea{
+    font-size: 12px;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+@media(max-width:50rem){
+    body{
+        overflow-x: hidden;
+    }
+    section{
+        display: block;
+        text-align: center;
+        width: 95%;
+        margin: 0 auto;
+        font-family: 'Playfair Display', serif;
+    }
+    .title{
+        padding: 0;
+    }
+    .button-div{
+        padding: 0;
+        max-width: 100px;
+        margin: 10px auto;
+    }
+
+    .form-div *{
+       width: 100%;
+    }
+    .form{
+        display: block;
+    }
+    input,textarea{
+    
+        font-size: 1rem;
+        max-height: 100vh;
+    }
+}
